@@ -121,3 +121,16 @@ body {
 .item-wrap {
   margin-bottom: 20px;
 }
+
+body {
+  padding-top: 0;
+}
+.nav-bar .navbar-brand img {
+  width: auto;
+  min-width: 150px;
+}
+
+.nav-bar .form-inline {
+  position: absolute;
+  right: 20px;
+}

@@ -12,7 +12,7 @@
 
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -34,16 +34,6 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a href="#" class="navbar-brand">Design Alley</a>
-      </div>
-      <p class="navbar-text navbar-right"><a href="#" class="navbar-link">Export</a></p>
-    </div>
-  </nav>
-
-
   <div id="drawerExample" class="drawer dw-xs-6 dw-sm-4 dw-md-3 dw-lg-3 fold open" aria-labelledby="drawerExample" aria-expanded="true">
     <div class="drawer-controls">
       <a href="#drawerExample" data-toggle="drawer" aria-foldedopen="true" aria-controls="drawerExample" class="btn btn-default folded" aria-expanded="true"><i class="fa fa-navicon"></i></a>
@@ -60,12 +50,18 @@
 
 
   <div id="main-container" class="container-fluid">
+    <nav class="navbar navbar-light bg-faded">
+      <a class="navbar-brand" href="#">
+        <img src="/images/design-alley-logo.png" width="30" height="30" alt="">
+      </a>
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="text" placeholder="Component Name">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Export</button>
+      </form>
+    </nav>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <div ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid1" data-gs-current-height="4" style="height: 300px;"></div>
-      </div>
-      <div class="col-md-6">
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid2" data-gs-current-height="6" style="height: 460px;"></div>
       </div>
     </div>
   </div>
