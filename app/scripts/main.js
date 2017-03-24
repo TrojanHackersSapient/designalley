@@ -15,7 +15,24 @@
           type: 'GET'
         }).done(function(response) {
           var someId = 'id-' + Math.floor(Math.random() * 1000);
-          drawer.append(`<div draggable="true" ondragstart="drag(event)" id=${someId} class="item-wrap">${response}<div>`);
+          drawer.append(`<div draggable="true" id=${someId} class="item-wrap">${response}<div>`);
+          $( ".drawer-body .item-wrap" ).draggable({
+            cancel: '',
+            appendTo: 'body',
+            helper: 'clone'
+          });
+          $( ".grid-stack" ).droppable({
+            drop: function(event, ui) {
+              if(ui.draggable.closest('.drawer-body')[0]){
+                $(this).append(ui.draggable.clone());
+                $('.grid-stack .item-wrap').draggable({
+                  containment: 'parent',
+                  cancel: ''
+                });
+              }
+
+            }
+          });
         });
       });
     });

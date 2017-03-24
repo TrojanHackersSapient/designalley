@@ -61,7 +61,7 @@
     </nav>
     <div class="row">
       <div class="col-md-12">
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid1" data-gs-current-height="4" style="height: 300px;"></div>
+        <div class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid1" data-gs-current-height="4" style="height: 300px;"></div>
       </div>
     </div>
   </div>
@@ -100,21 +100,24 @@
 
 
   <script>
-    function allowDrop(ev) {
-      ev.preventDefault();
-    }
+    // function allowDrop(ev) {
+    //   ev.preventDefault();
+    // }
+    //
+    // $(".drawer-body .item-wrap").draggable();
+    //
+    // $(".grid-stack").droppable({
+    //   drop: function (ev, ui) {
+    //     ev.preventDefault();
+    //     var cloneCopy = ui.draggable.cloneNode(true, true)
+    //     $(this).append(cloneCopy);
+    //   }
+    // });
 
-    function drag(ev) {
-      ev.dataTransfer.setData("text", ev.target.id);
-    }
     
-    function drop(ev) {
-      ev.preventDefault();
-      var data = ev.dataTransfer.getData("text");
-      var cloneCopy = document.getElementById(data).cloneNode(true, true)
-      cloneCopy.setAttribute('ondragstart', '');
-      ev.target.appendChild(cloneCopy);
-    }
+
+
+
   </script>
 
   <!-- endbuild -->
