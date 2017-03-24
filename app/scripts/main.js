@@ -1,37 +1,88 @@
-var tree = [{
-    text: "Button",
-    nodes: [{
-        text: '<div class="grid-stack-item ui-draggable" style="position: relative; left: 0px; top: 0px;"><div class="grid-stack-item-content ui-draggable-handle"><button type="button" onclick="alert("Hello world!")">Click Me!</button></div></div>',
-        nodes: [{
-            text: "Grandchild 1"
-          },
-          {
-            text: "Grandchild 2"
-          }
-        ]
-      },
-      {
-        text: "Child 2"
-      }
-    ]
-  },
-  {
-    text: "Parent 2"
-  },
-  {
-    text: "Parent 3"
-  },
-  {
-    text: "Parent 4"
-  },
-  {
-    text: "Parent 5"
-  }
-];
+var allComponents = ['button', 'grid'];
+var tree = [];
+for(var i=0; i<allComponents.length; i++) {
+  $.ajax({
+    url: 'http://localhost:9000/components/'+allComponents[i]+'.html',
+    type: 'GET',
+    action: allComponents[i]
+  }).done(function(response) {
+    var obj = {
+      text: this.action,
+      nodes: [{
+        text: '<div class="grid-stack-item ui-draggable" style="position: relative; left: 0px; top: 0px;"><div class="grid-stack-item-content ui-draggable-handle">'+response+'</div></div>'
+      }]
+    };
+    tree.push(obj);
+  });
+}
 
-$('#tree').treeview({
-  data: tree
+setTimeout(function() {
+  $('#tree').treeview({
+    data: tree
+  });
+  $(function() {
+  var options = {
+    width: 6,
+    float: false,
+    removable: '.trash',
+    removeTimeout: 100,
+    acceptWidgets: '.grid-stack-item'
+  };
+  $('#grid1').gridstack(options);
+  $('#grid2').gridstack(_.defaults({
+    float: true
+  }, options));
+
+  var items = [{
+      x: 0,
+      y: 0,
+      width: 2,
+      height: 2
+    },
+    {
+      x: 3,
+      y: 1,
+      width: 1,
+      height: 2
+    },
+    {
+      x: 4,
+      y: 1,
+      width: 1,
+      height: 1
+    },
+    {
+      x: 2,
+      y: 3,
+      width: 3,
+      height: 1
+    },
+    {
+      x: 2,
+      y: 5,
+      width: 1,
+      height: 1
+    }
+  ];
+
+  $('.grid-stack').each(function() {
+    var grid = $(this).data('gridstack');
+
+    _.each(items, function(node) {
+      grid.addWidget($('<div><div class="grid-stack-item-content" /><div/>'),
+        node.x, node.y, node.width, node.height);
+    }, this);
+  });
+
+  $('.grid-stack-item').draggable({
+    revert: 'invalid',
+    handle: '.grid-stack-item-content',
+    scroll: false,
+    appendTo: 'body'
+  });
 });
+
+}, 2000);
 
 // Testing Export functionality
 $('.export-demo').click(function(e) {
