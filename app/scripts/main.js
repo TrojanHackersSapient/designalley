@@ -29,6 +29,20 @@
                   containment: 'parent',
                   cancel: ''
                 });
+
+
+                $( ".grid-stack" ).droppable({
+                  drop: function(event, ui) {
+                    if(ui.draggable.closest('.drawer-body')[0]){
+                      $(this).append(ui.draggable.clone());
+                      $('.grid-stack .item-wrap').draggable({
+                        containment: 'parent',
+                        cancel: ''
+                      });
+                    }
+
+                  }
+                });
               }
 
             }
