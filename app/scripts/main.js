@@ -14,7 +14,8 @@
           url: 'http://localhost:9000/components/'+components[i].name+'.html',
           type: 'GET'
         }).done(function(response) {
-          drawer.append(`<div class="item-wrap">${response}<div>`);
+          var someId = 'id-' + Math.floor(Math.random() * 1000);
+          drawer.append(`<div draggable="true" ondragstart="drag(event)" id=${someId} class="item-wrap">${response}<div>`);
         });
       }
     });
@@ -26,4 +27,3 @@
 
   init();
 }());
-
