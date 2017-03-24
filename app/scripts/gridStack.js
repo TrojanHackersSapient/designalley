@@ -52,10 +52,17 @@ $(function() {
     }, this);
   });
 
-  $('.sidebar .grid-stack-item').draggable({
+  $('.grid-stack-item').draggable({
     revert: 'invalid',
     handle: '.grid-stack-item-content',
     scroll: false,
     appendTo: 'body'
   });
+
+  // $('.sidebar .grid-stack-item').draggable({
+  //   revert: 'invalid',
+  //   handle: '.grid-stack-item-content',
+  //   scroll: false,
+  //   appendTo: 'body'
+  // });
 });

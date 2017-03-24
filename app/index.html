@@ -1,123 +1,174 @@
 <!doctype html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>designalley</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>designalley</title>
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/bower_components/bootstrap-drawer/dist/css/bootstrap-drawer.min.css" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/gridStack.css">
-    <!-- endbuild -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap-drawer/dist/css/bootstrap-drawer.min.css" />
 
-    <link rel="stylesheet" href="/bower_components/gridstack/dist/gridstack.css" />
-    <link rel="stylesheet" href="/bower_components/gridstack/dist/gridstack-extra.css" />
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/gridStack.css">
+  <!-- endbuild -->
+
+  <link rel="stylesheet" href="/bower_components/gridstack/dist/gridstack.css" />
+  <link rel="stylesheet" href="/bower_components/gridstack/dist/gridstack-extra.css" />
 
 
-  </head>
-  <body class="has-drawer">
-    <!--[if IE]>
+</head>
+
+<body class="has-drawer">
+  <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div id="drawerExample" class="drawer dw-xs-6 dw-sm-4 dw-md-3 fold" aria-labelledby="drawerExample">
-      <div class="drawer-controls">
-        <a href="#drawerExample" data-toggle="drawer" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-default folded" aria-expanded="false"><i class="fa fa-navicon"></i></a>
-      </div>
-      <div class="drawer-contents">
+  <div class="content-wrapper">
+    <div>
+      <div id="drawerExample" class="drawer dw-xs-6 dw-sm-4 dw-md-3 fold" aria-labelledby="drawerExample">
+        <div class="drawer-controls">
+          <a href="#drawerExample" data-toggle="drawer" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-default folded" aria-expanded="false"><i class="fa fa-navicon"></i></a>
+        </div>
+        <div class="drawer-contents">
           <div class="drawer-heading">
-              <h2 class="drawer-title">Drawer</h2>
+            <h2 class="drawer-title">Drawer</h2>
           </div>
           <div class="drawer-body">
             <div id="tree"></div>
           </div>
+        </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="header">
-        <h3 class="text-muted">designalley</h3>
-      </div>
-    </div>
+    <div>
 
 
 
-    <div class="container-fluid">
-        <h1>Two grids demo</h1>
+
+      <div id="main-container" class="container-fluid">
 
         <div class="row">
-            <div class="col-md-3">
-                <div class="sidebar">
-                    <div class="grid-stack-item ui-draggable" style="position: relative; left: 0px; top: 0px;"><div class="grid-stack-item-content ui-draggable-handle">Drag me</div></div>
-                </div>
+          <div class="col-md-3">
+            <div class="sidebar">
+              <div class="grid-stack-item ui-draggable" style="position: relative; left: 0px; top: 0px;">
+                <div class="grid-stack-item-content ui-draggable-handle">Drag me</div>
+              </div>
             </div>
-            <div class="col-md-9">
-                <div class="trash ui-droppable">
-                </div>
+          </div>
+          <div class="col-md-9">
+            <div class="trash ui-droppable">
             </div>
+          </div>
         </div>
 
         <div class="row">
-            <div class="col-md-6">
-                <div class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid1" data-gs-current-height="4" style="height: 300px;">
-                <div data-gs-x="0" data-gs-y="0" data-gs-width="2" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"><div class="grid-stack-item-content ui-draggable-handle"></div><div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div><div data-gs-x="3" data-gs-y="0" data-gs-width="3" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"><div class="grid-stack-item-content ui-draggable-handle"></div><div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div><div data-gs-x="0" data-gs-y="1" data-gs-width="6" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"><div class="grid-stack-item-content ui-draggable-handle"></div><div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div><div data-gs-x="0" data-gs-y="2" data-gs-width="6" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"><div class="grid-stack-item-content ui-draggable-handle"></div><div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div></div>
+          <div class="col-md-6">
+            <div class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid1" data-gs-current-height="4" style="height: 300px;">
+              <div data-gs-x="0" data-gs-y="0" data-gs-width="2" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
+                <div class="grid-stack-item-content ui-draggable-handle"></div>
+                <div></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+              </div>
+              <div data-gs-x="3" data-gs-y="0" data-gs-width="3" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
+                <div class="grid-stack-item-content ui-draggable-handle"></div>
+                <div></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+              </div>
+              <div data-gs-x="0" data-gs-y="1" data-gs-width="6" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
+                <div class="grid-stack-item-content ui-draggable-handle"></div>
+                <div></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+              </div>
+              <div data-gs-x="0" data-gs-y="2" data-gs-width="6" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
+                <div class="grid-stack-item-content ui-draggable-handle"></div>
+                <div></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+              </div>
             </div>
-            <div class="col-md-6">
-                <div class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid2" data-gs-current-height="6" style="height: 460px;">
-                <div data-gs-x="1" data-gs-y="0" data-gs-width="2" data-gs-height="2" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"><div class="grid-stack-item-content ui-draggable-handle"></div><div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div><div data-gs-x="3" data-gs-y="1" data-gs-width="1" data-gs-height="2" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"><div class="grid-stack-item-content ui-draggable-handle"></div><div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div><div data-gs-x="4" data-gs-y="1" data-gs-width="1" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"><div class="grid-stack-item-content ui-draggable-handle"></div><div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div><div data-gs-x="2" data-gs-y="3" data-gs-width="3" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"><div class="grid-stack-item-content ui-draggable-handle"></div><div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div><div data-gs-x="2" data-gs-y="5" data-gs-width="1" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"><div class="grid-stack-item-content ui-draggable-handle"></div><div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div></div></div>
+          </div>
+          <div class="col-md-6">
+            <div class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid2" data-gs-current-height="6" style="height: 460px;">
+              <div data-gs-x="1" data-gs-y="0" data-gs-width="2" data-gs-height="2" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
+                <div class="grid-stack-item-content ui-draggable-handle"></div>
+                <div></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+              </div>
+              <div data-gs-x="3" data-gs-y="1" data-gs-width="1" data-gs-height="2" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
+                <div class="grid-stack-item-content ui-draggable-handle"></div>
+                <div></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+              </div>
+              <div data-gs-x="4" data-gs-y="1" data-gs-width="1" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
+                <div class="grid-stack-item-content ui-draggable-handle"></div>
+                <div></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+              </div>
+              <div data-gs-x="2" data-gs-y="3" data-gs-width="3" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
+                <div class="grid-stack-item-content ui-draggable-handle"></div>
+                <div></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+              </div>
+              <div data-gs-x="2" data-gs-y="5" data-gs-width="1" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
+                <div class="grid-stack-item-content ui-draggable-handle"></div>
+                <div></div>
+                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Export Example -->
+      <a class="export-demo" href="#">Export</a>
     </div>
-
-        <!-- Export Example -->
-        <a class="export-demo" href="#">Export</a>
+  </div>
 
 
 
 
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/tether/dist/js/tether.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/tether/dist/js/tether.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap/js/dist/util.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/button.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
-    <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
-    <script src="/bower_components/bootstrap-drawer/dist/js/drawer.min.js"></script>
-    <script src="/bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
-    <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
-    <script src="/bower_components/lodash/dist/lodash.js"></script>
-    <script src="/bower_components/gridstack/dist/gridstack.js"></script>
-    <!-- endbuild -->
+  <!-- build:js scripts/plugins.js -->
+  <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+  <script src="/bower_components/bootstrap-drawer/dist/js/drawer.min.js"></script>
+  <script src="/bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
+  <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
+  <script src="/bower_components/lodash/dist/lodash.js"></script>
+  <script src="/bower_components/gridstack/dist/gridstack.js"></script>
+  <!-- endbuild -->
 
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <script src="scripts/gridStack.js"></script>
-
-
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/gridStack.js"></script>
 
 
-    <!-- endbuild -->
-  </body>
+
+
+  <!-- endbuild -->
+</body>
+
 </html>

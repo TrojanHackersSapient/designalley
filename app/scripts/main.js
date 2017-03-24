@@ -1,7 +1,7 @@
 var tree = [{
     text: "Button",
     nodes: [{
-        text: '<button type="button" onclick="alert("Hello world!")">Click Me!</button>',
+        text: '<div class="grid-stack-item ui-draggable" style="position: relative; left: 0px; top: 0px;"><div class="grid-stack-item-content ui-draggable-handle"><button type="button" onclick="alert("Hello world!")">Click Me!</button></div></div>',
         nodes: [{
             text: "Grandchild 1"
           },
