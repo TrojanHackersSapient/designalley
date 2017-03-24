@@ -16,6 +16,11 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
-    "bootstrap-drawer": "^1.0.6"
+    "bootstrap-drawer": "^1.0.6",
+    "bootstrap-treeview": "^v1.2.0"
+  },
+  "resolutions": {
+    "bootstrap": "~4.0.0-alpha.6",
+    "jquery": ">=1.9.1"
   }
 }
