@@ -126,9 +126,24 @@ gulp.task('serve', () => {
                   if(err) {
                     next();
                   }else{
-                    response.end('File Exported');
+                    fs.readFile('app/components.json', 'utf8', function (err, componentConfig) {
+                      var updatedBlock;
+                      if (err) {
+                        return console.log(err);
+                      }
+                      updatedBlock = JSON.parse(componentConfig).push({
+                        name: postData.component
+                      });
+                      fs.writeFile('app/components.json', JSON.stringify(updatedBlock), function(err) {
+                        if(err) {
+                          next();
+                        }else{
+                          response.end('File Exported');
+                        }
+                      });
+                    });
                   }
-              });
+                });
               });
             }
           }
