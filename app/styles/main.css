@@ -108,26 +108,11 @@ body {
   border: 1px solid #d3d3d3;
 }
 
-.content-wrapper {
-  display: flex;
+#drawerExample.open ~ #main-container {
+  width: 75%;
+  margin-left: 25%;
 }
 
-#drawerExample[aria-expanded="true"] {
-  position: static;
-  margin: 0;
-  width: auto;
-}
-
-#main-container {
-  width: 1020px;
-}
-
-.grid-stack-item.ui-draggable{
-  padding: 10px;
-  border: 1px solid #ddd;
+.item-wrap {
   margin-bottom: 20px;
-}
-
-.grid-stack-item-content{
-  background: none;
 }
