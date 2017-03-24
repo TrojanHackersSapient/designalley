@@ -10,6 +10,7 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 var dev = true;
+var exportPath = 'app/'
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.css')
@@ -98,7 +99,41 @@ gulp.task('serve', () => {
         routes: {
           '/bower_components': 'bower_components'
         }
-      }
+      },
+      middleware: [
+        {
+          route: "/api/export",
+          handle: function (request, response, next) {
+            var fs = require('fs');
+            var qs = require('querystring');
+
+            if (request.method === 'POST'){
+              var body = '';
+
+              request.on('data', function (data) {
+                body += data;
+
+                // Too much POST data, kill the connection!
+                if (body.length > 1e6){
+                  request.connection.destroy();
+                }
+              });
+
+              request.on('end', function () {
+                var postData = qs.parse(body);
+
+                fs.writeFile(exportPath + postData.component + '.html', postData.content, function(err) {
+                  if(err) {
+                    next();
+                  }else{
+                    response.end('File Exported');
+                  }
+              });
+              });
+            }
+          }
+        }
+      ]
     });
 
     gulp.watch([
