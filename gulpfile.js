@@ -131,7 +131,8 @@ gulp.task('serve', () => {
                       if (err) {
                         return console.log(err);
                       }
-                      updatedBlock = JSON.parse(componentConfig).push({
+                      updatedBlock = JSON.parse(componentConfig);
+                      updatedBlock.push({
                         name: postData.component
                       });
                       fs.writeFile('app/components.json', JSON.stringify(updatedBlock), function(err) {
