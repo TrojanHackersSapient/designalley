@@ -81,7 +81,6 @@ setTimeout(function() {
     appendTo: 'body'
   });
 });
-
 }, 2000);
 
 // Testing Export functionality
