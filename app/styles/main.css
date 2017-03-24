@@ -107,3 +107,17 @@ body {
   background: #fff;
   border: 1px solid #d3d3d3;
 }
+
+.content-wrapper {
+  display: flex;
+}
+
+#drawerExample[aria-expanded="true"] {
+  position: static;
+  margin: 0;
+  width: auto;
+}
+
+#main-container {
+  width: 1020px;
+}
