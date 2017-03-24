@@ -33,18 +33,3 @@ var tree = [{
 $('#tree').treeview({
   data: tree
 });
-
-// Testing Export functionality
-$('.export-demo').click(function(e) {
-  e.preventDefault();
-  $.ajax({
-    url: 'http://localhost:9000/api/export',
-    type: 'POST',
-    data: {
-      component: 'button',
-      content: $('.header')[0].outerHTML
-    }
-  }).done(function(status) {
-    console.log(status);
-  });
-});
