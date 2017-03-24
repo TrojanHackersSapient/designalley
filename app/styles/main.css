@@ -113,6 +113,11 @@ body {
   margin-left: 25%;
 }
 
+#drawerExample.open .drawer-controls .btn {
+  position: absolute;
+  right: 77px;
+}
+
 .item-wrap {
   margin-bottom: 20px;
 }
