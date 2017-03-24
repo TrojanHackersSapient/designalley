@@ -1,14 +1,28 @@
 [
   {
     "name": "button"
-  },  
+  },
   {
     "name": "input.text"
-  },  
+  },
   {
-    "name": "select"
-  },  
+    "name": "input.text"
+  },
   {
-    "name": "text"
+    "name": "alert"
+  },
+  {
+    "name": "badge"
+  },
+  {
+    "name": "label.primary"
+  },
+  {
+    "name": "label.success"
+  },   {
+    "name": "label.warning"
+  },
+  {
+    "name": "thumbnail"
   }
 ]
