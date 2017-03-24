@@ -107,11 +107,13 @@
     function drag(ev) {
       ev.dataTransfer.setData("text", ev.target.id);
     }
-
+    
     function drop(ev) {
       ev.preventDefault();
       var data = ev.dataTransfer.getData("text");
-      ev.target.appendChild(document.getElementById(data).cloneNode(true, true));
+      var cloneCopy = document.getElementById(data).cloneNode(true, true)
+      cloneCopy.setAttribute('ondragstart', '');
+      ev.target.appendChild(cloneCopy);
     }
   </script>
 
