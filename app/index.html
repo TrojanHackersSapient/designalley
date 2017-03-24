@@ -55,73 +55,20 @@
 
 
       <div id="main-container" class="container-fluid">
-
         <div class="row">
-          <div class="col-md-3">
-            <div class="sidebar">
-              <div class="grid-stack-item ui-draggable" style="position: relative; left: 0px; top: 0px;">
-                <div class="grid-stack-item-content ui-draggable-handle">Drag me</div>
-              </div>
+        <div id="div1" class="col-md-4">
+        				<div draggable="true" ondragstart="drag(event)" id="drag1">asegftseftgwgftwgtreg</div>
+        			</div>
             </div>
-          </div>
-          <div class="col-md-9">
-            <div class="trash ui-droppable">
-            </div>
-          </div>
-        </div>
-
         <div class="row">
           <div class="col-md-6">
-            <div class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid1" data-gs-current-height="4" style="height: 300px;">
-              <div data-gs-x="0" data-gs-y="0" data-gs-width="2" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
-                <div class="grid-stack-item-content ui-draggable-handle"></div>
-                <div></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
-              </div>
-              <div data-gs-x="3" data-gs-y="0" data-gs-width="3" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
-                <div class="grid-stack-item-content ui-draggable-handle"></div>
-                <div></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
-              </div>
-              <div data-gs-x="0" data-gs-y="1" data-gs-width="6" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
-                <div class="grid-stack-item-content ui-draggable-handle"></div>
-                <div></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
-              </div>
-              <div data-gs-x="0" data-gs-y="2" data-gs-width="6" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
-                <div class="grid-stack-item-content ui-draggable-handle"></div>
-                <div></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
-              </div>
+            <div ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid1" data-gs-current-height="4" style="height: 300px;">
+
             </div>
           </div>
           <div class="col-md-6">
-            <div class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid2" data-gs-current-height="6" style="height: 460px;">
-              <div data-gs-x="1" data-gs-y="0" data-gs-width="2" data-gs-height="2" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
-                <div class="grid-stack-item-content ui-draggable-handle"></div>
-                <div></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
-              </div>
-              <div data-gs-x="3" data-gs-y="1" data-gs-width="1" data-gs-height="2" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
-                <div class="grid-stack-item-content ui-draggable-handle"></div>
-                <div></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
-              </div>
-              <div data-gs-x="4" data-gs-y="1" data-gs-width="1" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
-                <div class="grid-stack-item-content ui-draggable-handle"></div>
-                <div></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
-              </div>
-              <div data-gs-x="2" data-gs-y="3" data-gs-width="3" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
-                <div class="grid-stack-item-content ui-draggable-handle"></div>
-                <div></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
-              </div>
-              <div data-gs-x="2" data-gs-y="5" data-gs-width="1" data-gs-height="1" class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide">
-                <div class="grid-stack-item-content ui-draggable-handle"></div>
-                <div></div>
-                <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90; display: none;"></div>
-              </div>
+            <div ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid2" data-gs-current-height="6" style="height: 460px;">
+
             </div>
           </div>
         </div>
@@ -166,7 +113,21 @@
   <script src="scripts/gridStack.js"></script>
 
 
+  <script>
+  		function allowDrop(ev) {
+  			ev.preventDefault();
+  		}
 
+  		function drag(ev) {
+  			ev.dataTransfer.setData("text", ev.target.id);
+  		}
+
+  		function drop(ev) {
+  			ev.preventDefault();
+  			var data = ev.dataTransfer.getData("text");
+  			ev.target.appendChild(document.getElementById(data).cloneNode(true, true));
+  		}
+  	</script>
 
   <!-- endbuild -->
 </body>
