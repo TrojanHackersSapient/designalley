@@ -6,7 +6,7 @@ var tree = [
         text: '<button type="button" onclick="alert("Hello world!")">Click Me!</button>',
         nodes: [
           {
-            text: "Grandchild 1"
+            text: "dsfasdf asdf"
           },
           {
             text: "Grandchild 2"
@@ -14,7 +14,7 @@ var tree = [
         ]
       },
       {
-        text: "Child 2"
+        text: '<div class="container-fluid"><div class="row"><div class="col-xs-7 col-sm-6 col-lg-8" style="background-color:red;">8</div><div class="col-xs-5 col-sm-6 col-lg-4" style="background-color:lavender;">4</div></div><div class="row"><div class="col-xs-6 col-sm-8 col-lg-10" style="background-color:lavenderblush;">10</div><div class="col-xs-6 col-sm-4 col-lg-2" style="background-color:lightgrey;">2</div></div></div>'
       }
     ]
   },
