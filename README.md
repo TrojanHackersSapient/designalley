@@ -10,3 +10,4 @@ Today's task
 - export as html
 - export as png
 - save component to existing components list (add to drawer)
+- Yes
