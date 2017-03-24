@@ -2,7 +2,7 @@
   "name": "designalley",
   "private": true,
   "dependencies": {
-    "bootstrap": "~4.0.0-alpha.6"
+    "bootstrap": "~3.3.4"
   },
   "overrides": {
     "bootstrap": {
@@ -17,11 +17,10 @@
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "bootstrap-drawer": "^1.0.6",
-    "bootstrap-treeview": "^v1.2.0",
-    "gridstack": "^0.2.6"
+    "dom-to-image": "^2.5.2"
   },
   "resolutions": {
-    "bootstrap": "~4.0.0-alpha.6",
+    "bootstrap": "~3.3.4",
     "jquery": ">=1.6"
   }
 }
