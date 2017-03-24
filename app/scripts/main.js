@@ -9,7 +9,7 @@
     var drawer = $('.drawer-body');
 
     $.getJSON('http://localhost:9000/components.json', function(components){
-      for (var i=0; i<components.length; i++) {
+      $.each(components, function(i, component){
         $.ajax({
           url: 'http://localhost:9000/components/'+components[i].name+'.html',
           type: 'GET'
@@ -17,7 +17,7 @@
           var someId = 'id-' + Math.floor(Math.random() * 1000);
           drawer.append(`<div draggable="true" ondragstart="drag(event)" id=${someId} class="item-wrap">${response}<div>`);
         });
-      }
+      });
     });
   };
 
