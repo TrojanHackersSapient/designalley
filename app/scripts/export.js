@@ -17,7 +17,7 @@ $('[data-export]').click(function(e){
     type: 'POST',
     data: {
       component: component,
-      content: $content[0].outerHTML
+      content: content[0].outerHTML
     }
   }).done(function(status){
     console.log(status);
