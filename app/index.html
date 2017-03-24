@@ -46,22 +46,19 @@
     </div>
   </div>
 
-
-
-
   <div id="main-container" class="container-fluid">
     <nav class="navbar navbar-light bg-faded">
       <a class="navbar-brand" href="#">
         <img src="/images/design-alley-logo.png" width="30" height="30" alt="">
       </a>
       <form class="form-inline">
-        <input class="form-control mr-sm-2" type="text" placeholder="Component Name">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Export</button>
+        <input required class="form-control mr-sm-2" type="text" placeholder="Component Name">
+        <button data-export class="btn btn-outline-primary my-2 my-sm-0" type="submit">Export</button>
       </form>
     </nav>
     <div class="row">
       <div class="col-md-12">
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid1" data-gs-current-height="4" style="height: 300px;"></div>
+        <div data-stage ondrop="drop(event)" ondragover="allowDrop(event)" class="grid-stack grid-stack-6 grid-stack-instance-3166 ui-droppable" id="grid1" data-gs-current-height="4" style="height: 300px;"></div>
       </div>
     </div>
   </div>
@@ -71,32 +68,14 @@
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
-  <script src="/bower_components/tether/dist/js/tether.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
-  <!-- build:js scripts/plugins.js -->
-  <script src="/bower_components/bootstrap/js/dist/util.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/button.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
-  <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
-  <script src="/bower_components/bootstrap-drawer/dist/js/drawer.min.js"></script>
-  <script src="/bower_components/bootstrap-treeview/dist/bootstrap-treeview.min.js"></script>
-  <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
-  <script src="/bower_components/lodash/dist/lodash.js"></script>
-  <script src="/bower_components/gridstack/dist/gridstack.js"></script>
-  <!-- endbuild -->
-
   <!-- build:js scripts/main.js -->
+  <script src="/bower_components/dom-to-image/dist/dom-to-image.min.js"></script>
+  <script src="scripts/FileSaver.js"></script>
+  <script src="scripts/export.js"></script>
   <script src="scripts/main.js"></script>
-  <script src="scripts/gridStack.js"></script>
 
 
   <script>

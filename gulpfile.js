@@ -10,7 +10,7 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 var dev = true;
-var exportPath = 'app/'
+var exportPath = 'app/components/'
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.css')

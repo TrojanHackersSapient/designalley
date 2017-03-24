@@ -1,11 +1,14 @@
 // Export functionality
-$('.export-demo').click(function(e){
+$('[data-export]').click(function(e){
+  var component = $(e.target).siblings('input').val();
+  var content = $('[data-stage]');
+
   e.preventDefault();
 
-  // Testing Export as PNG
-  domtoimage.toBlob($('.sidebar')[0])
+  // Export component as PNG
+  domtoimage.toBlob(content[0])
     .then(function (blob) {
-        window.saveAs(blob, 'my-node.png');
+        window.saveAs(blob, component + '.png');
     });
 
   // Export component as HTML
@@ -13,10 +16,13 @@ $('.export-demo').click(function(e){
     url: 'http://localhost:9000/api/export',
     type: 'POST',
     data: {
-      component: 'button',
-      content: $('.header')[0].outerHTML
+      component: component,
+      content: $content[0].outerHTML
     }
   }).done(function(status){
     console.log(status);
   });
+
+  // Add to drawer
+  $('.drawer-body').append(content);
 });
