@@ -108,18 +108,9 @@ body {
   border: 1px solid #d3d3d3;
 }
 
-.content-wrapper {
-  display: flex;
-}
-
-#drawerExample[aria-expanded="true"] {
-  position: static;
-  margin: 0;
-  width: auto;
-}
-
-#main-container {
-  width: 1020px;
+#drawerExample.open ~ #main-container {
+  width: 75%;
+  margin-left: 25%;
 }
 
 .grid-stack-item.ui-draggable{
