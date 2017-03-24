@@ -121,3 +121,13 @@ body {
 #main-container {
   width: 1020px;
 }
+
+.grid-stack-item.ui-draggable{
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.grid-stack-item-content{
+  background: none;
+}
