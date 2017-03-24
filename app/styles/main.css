@@ -85,3 +85,11 @@ body {
     border-bottom: 0;
   }
 }
+
+
+
+
+.drawer-controls .btn {
+  background: #fff;
+  border: 1px solid #d3d3d3;
+}
