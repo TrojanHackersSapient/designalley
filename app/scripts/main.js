@@ -14,7 +14,7 @@
           url: 'http://localhost:9000/components/'+components[i].name+'.html',
           type: 'GET'
         }).done(function(response) {
-          drawer.append(`<div class="item-wrap">${response}</div>`);
+          drawer.append(`<div class="item-wrap">${response}<div>`);
         });
       }
     });
