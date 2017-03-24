@@ -40,5 +40,9 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "gridstack": "^0.2.6",
+    "lodash": "^4.17.4"
   }
 }
