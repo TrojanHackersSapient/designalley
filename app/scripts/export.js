@@ -21,6 +21,7 @@ $('[data-export]').click(function(e){
     }
   }).done(function(status){
     console.log(status);
+    $.toaster({ priority : 'success', title : 'Success', message : 'The component added to your drawer successfully.'});
   });
 
   // Add to drawer
