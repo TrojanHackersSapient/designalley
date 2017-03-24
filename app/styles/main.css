@@ -125,12 +125,20 @@ body {
 body {
   padding-top: 0;
 }
-.nav-bar .navbar-brand img {
+
+.navbar .navbar-brand img {
   width: auto;
-  min-width: 150px;
+  height: 60px;
 }
 
-.nav-bar .form-inline {
+.navbar .form-inline {
   position: absolute;
   right: 20px;
+  top: 25px;
+}
+
+#grid1 {
+  background: none !important;
+  border: 2px dashed #d3d3d3;
+  height: 300px;
 }
