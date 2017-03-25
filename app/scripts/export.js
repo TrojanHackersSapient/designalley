@@ -2,8 +2,13 @@
 $('[data-export]').click(function(e){
   var component = $(e.target).siblings('input').val();
   var content = $('[data-stage]');
-
+  content.removeAttr('data-stage');
   e.preventDefault();
+  var childNodes = content.children(), childNodeHTML = '<div>';
+  for(var i=0; i<childNodes.length; i++) {
+    childNodeHTML += childNodes[i].innerHTML;
+  }
+  childNodeHTML += '</div>';
 
   // Export component as PNG
   domtoimage.toBlob(content[0])
@@ -17,7 +22,7 @@ $('[data-export]').click(function(e){
     type: 'POST',
     data: {
       component: component,
-      content: content[0].outerHTML
+      content: childNodeHTML
     }
   }).done(function(status){
     console.log(status);
